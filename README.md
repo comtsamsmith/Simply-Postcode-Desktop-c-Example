@@ -37,11 +37,13 @@ The following text was used with Chat GPT to create the basic example and could 
 Simply change "In c#, .net 4.8 Windows app, " to what ever ... and ask chat GPT...
 
 ```
-In c#, .net 4.8 Windows app, I need to add to a text box "textBoxFind" to perform a search, which calls an API given at https://api.simplylookupadmin.co.uk.   
+In c#, .net 4.8 Windows app, I need to add to a text box "textBoxFind" to perform a search, which 
+calls an API given at https://api.simplylookupadmin.co.uk.   
 
 I would suggest on key up event, of this textbox, if stopped typing for 300 ms call
 
-"https://api.simplylookupadmin.co.uk/full_v3/getaddresslist?data_api_Key=APIKEY&query=texttosearch" to populate a selection box called "listBoxAddressLines".  This will return json
+"https://api.simplylookupadmin.co.uk/full_v3/getaddresslist?data_api_Key=APIKEY&query=texttosearch" to 
+populate a selection box called "listBoxAddressLines".  This will return json
 
 "{
 
@@ -81,7 +83,8 @@ I would suggest on key up event, of this textbox, if stopped typing for 300 ms c
 
   "errormessage": ""
 
-}" display this for user selection, and then if the user selects a line, call full_v3/getselectedaddress with api key and ID of line selected.
+}" display this for user selection, and then if the user selects a line, call full_v3/getselectedaddress 
+with api key and ID of line selected.
 
 the API call full_v3/getselectedaddress   will return json
 
@@ -119,7 +122,8 @@ the API call full_v3/getselectedaddress   will return json
     "geodistanceinmiles": 0 
 }
 
-Then, put the returned address fields "organisation,line1,line2,line3,town,county,postcode,country,found,licenseStatus" into a multiline textbox called "textBoxAddress."  
+Then, put the returned address fields "organisation,line1,line2,line3,town,county,postcode,
+country,found,licenseStatus" into a multiline textbox called "textBoxAddress."  
 ```
 
 
