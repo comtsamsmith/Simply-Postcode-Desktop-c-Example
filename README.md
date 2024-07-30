@@ -7,12 +7,13 @@ Postcode, Postcode + Part of address or words (search as you type), return a lis
 
 [Swagger API UI](https://api.simplylookupadmin.co.uk)
 
-For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using online code. [More info](https://www.simplypostcode.com/address-finder-for-web-site)
+For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using online code. [More info on SimplyCompleteAI](https://www.simplypostcode.com/address-finder-for-web-site)
 
-## Search by Postcode
+## Screen shots
+1. Search by postcode
 ![Screenshot of it in action.](/images/screen1.png)
 
-## Search by Words
+2. Search by Words
 ![Screenshot of it in action.](/images/screen2.png)
 
 ## The Code Structure
