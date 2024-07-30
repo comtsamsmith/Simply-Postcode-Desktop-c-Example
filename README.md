@@ -13,9 +13,9 @@ For easy web integration, we also offer "SimplyCompleteAI Address Finder", whic
 
 [Prices](https://www.simplypostcode.com/pricing/price-list)
 
-[What makes us different](https://www.simplypostcode.com/royal-mail-paf-daily-data)
+[What makes us different?](https://www.simplypostcode.com/royal-mail-paf-daily-data)
 
-## Screen shots
+## Screenshots of Example Program
 1. Search by postcode<br>
 ![Screenshot of it in action.](/images/screen1.png)
 
@@ -24,7 +24,7 @@ For easy web integration, we also offer "SimplyCompleteAI Address Finder", whic
 
 ## The Code Structure
 
-The main portion of the code is in `cSharpeCode/Form1.cs`, which does all the work.  
+The main portion of the code is in `cSharpeCode/Form1.cs`, which does all the search work.  
 `cSharpeCode/AppCode/Settings.cs` is used to store the API key, in the registry, which is obtained within your Simply Postcode online account.
 `cSharpeCode/AppCode/typeDefs.cs` defines a handful of data structures that represent the JSON data returned by the API.
 
@@ -33,6 +33,8 @@ The main portion of the code is in `cSharpeCode/Form1.cs`, which does all the wo
 The following text was used with Chat GPT to create the basic example and could be used to create in different languages/platforms etc.
 
 ### Chat GPT Question used to create such an Example
+
+Simply change "In c#, .net 4.8 Windows app, " to what ever ... and ask chat GPT...
 
 ```
 In c#, .net 4.8 Windows app, I need to add to a text box "textBoxFind" to perform a search, which calls an API given at https://api.simplylookupadmin.co.uk.   
