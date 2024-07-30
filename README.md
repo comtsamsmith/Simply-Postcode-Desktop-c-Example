@@ -10,10 +10,10 @@ Postcode, Postcode + Part of address or words (search as you type), return a lis
 For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using online code. [More info on SimplyCompleteAI](https://www.simplypostcode.com/address-finder-for-web-site)
 
 ## Screen shots
-1. Search by postcode
+1. Search by postcode<br>
 ![Screenshot of it in action.](/images/screen1.png)
 
-2. Search by Words
+2. Search by Words<br>
 ![Screenshot of it in action.](/images/screen2.png)
 
 ## The Code Structure
