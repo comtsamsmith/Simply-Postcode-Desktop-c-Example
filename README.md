@@ -3,11 +3,13 @@
 This example demonstrates how to use Simply Postcode to implement a Full address searched by
 Postcode, Postcode + Part of address or words (search as you type), return a list of matching addresses.
 
-[Click here for more details on the API and how to get an API key](https://www.simplypostcode.com/address-finder-open-api#getselectedaddress)
+[Open account to get API Key](https://www.simplylookupconsole.co.uk/wizards/OpenAccount.aspx?coid=30_30_30_______)
+
+[Click here for more details on the API](https://www.simplypostcode.com/address-finder-open-api#getselectedaddress)
 
 [Swagger API UI](https://api.simplylookupadmin.co.uk)
 
-For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using online code. [More info on SimplyCompleteAI](https://www.simplypostcode.com/address-finder-for-web-site)
+For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using one line of code. [More info on SimplyCompleteAI](https://www.simplypostcode.com/address-finder-for-web-site)
 
 ## Screen shots
 1. Search by postcode<br>
@@ -26,7 +28,7 @@ The main portion of the code is in `cSharpeCode/Form1.cs`, which does all the wo
 
 The following text was used with Chat GPT to create the basic example and could be used to create in different languages/platforms etc.
 
-### Chat GPT Question 
+### Chat GPT Question used to create such an Example
 
 ```
 In c#, .net 4.8 Windows app, I need to add to a text box "textBoxFind" to perform a search, which calls an API given at https://api.simplylookupadmin.co.uk.   
