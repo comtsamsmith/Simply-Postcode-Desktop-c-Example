@@ -3,9 +3,11 @@
 This example demonstrates how to use Simply Postcode to implement a Full address searched by
 Postcode, Postcode + Part of address or words (search as you type), return a list of matching addresses.
 
-For more details on the API and how to get an API key see https://www.simplypostcode.com/address-finder-open-api#getselectedaddress
+[Click here for more details on the API and how to get an API key](https://www.simplypostcode.com/address-finder-open-api#getselectedaddress)
 
-For easy web integration, we also offer "SimplyCompleteAI Address Finder" https://www.simplypostcode.com/address-finder-for-web-site , which can be added to any site using online code.
+[Swagger API UI](https://api.simplylookupadmin.co.uk)
+
+For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using online code. [More info](https://www.simplypostcode.com/address-finder-for-web-site)
 
 ## Search by Postcode
 ![Screenshot of it in action.](/images/screen1.png)
@@ -15,9 +17,9 @@ For easy web integration, we also offer "SimplyCompleteAI Address Finder" https
 
 ## The Code Structure
 
-The main portion of the code is in cSharpeCode/Form1.cs, which does all the work.  
-cSharpeCode/AppCode/Settings.cs is used to store the API key, in the registry, which is obtained within your Simply Postcode online account.
-cSharpeCode/AppCode/typeDefs.cs defines a handful of data structures that represent the JSON data returned by the API.
+The main portion of the code is in `cSharpeCode/Form1.cs`, which does all the work.  
+`cSharpeCode/AppCode/Settings.cs` is used to store the API key, in the registry, which is obtained within your Simply Postcode online account.
+`cSharpeCode/AppCode/typeDefs.cs` defines a handful of data structures that represent the JSON data returned by the API.
 
 ## The basic principle is as follows.   
 
