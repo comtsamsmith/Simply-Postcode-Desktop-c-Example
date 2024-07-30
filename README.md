@@ -7,10 +7,10 @@ For more details on the API and how to get an API key see https://www.simplypost
 
 For easy web integration, we also offer "SimplyCompleteAI Address Finder" https://www.simplypostcode.com/address-finder-for-web-site , which can be added to any site using online code.
 
-Search by Postcode
+## Search by Postcode
 ![Screenshot of it in action.](/images/screen1.png)
 
-Search by Words
+## Search by Words
 ![Screenshot of it in action.](/images/screen2.png)
 
 ## The basic principle is as follows.   
