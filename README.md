@@ -7,6 +7,9 @@ For more details on the API and how to get an API key see https://www.simplypost
 
 For easy web integration, we also offer "SimplyCompleteAI Address Finder" https://www.simplypostcode.com/address-finder-for-web-site , which can be added to any site using online code.
 
+
+![Screenshot of it in action.](/images/screen1.png)
+
 ## The basic principle is as follows.   
 
 The following text was used with Chat GPT to create the basic example and could be used to create in different languages/platforms etc.
