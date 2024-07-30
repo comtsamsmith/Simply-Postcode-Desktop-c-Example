@@ -13,6 +13,12 @@ For easy web integration, we also offer "SimplyCompleteAI Address Finder" https
 ## Search by Words
 ![Screenshot of it in action.](/images/screen2.png)
 
+## The Code Structure
+
+The main portion of the code is in cSharpeCode/Form1.cs, which does all the work.  
+cSharpeCode/AppCode/Settings.cs is used to store the API key, in the registry, which is obtained within your Simply Postcode online account.
+cSharpeCode/AppCode/typeDefs.cs defines a handful of data structures that represent the JSON data returned by the API.
+
 ## The basic principle is as follows.   
 
 The following text was used with Chat GPT to create the basic example and could be used to create in different languages/platforms etc.
