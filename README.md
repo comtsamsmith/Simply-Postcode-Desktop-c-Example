@@ -3,13 +3,17 @@
 This example demonstrates how to use Simply Postcode to implement a Full address searched by
 Postcode, Postcode + Part of address or words (search as you type), return a list of matching addresses.
 
-[Open account to get API Key](https://www.simplylookupconsole.co.uk/wizards/OpenAccount.aspx?coid=30_30_30_______)
+[Open on line account to get API Key](https://www.simplylookupconsole.co.uk/wizards/OpenAccount.aspx?coid=30_30_30_______)
 
 [Click here for more details on the API](https://www.simplypostcode.com/address-finder-open-api#getselectedaddress)
 
 [Swagger API UI](https://api.simplylookupadmin.co.uk)
 
 For easy web integration, we also offer "SimplyCompleteAI Address Finder", which can be added to any site using one line of code. [More info on SimplyCompleteAI](https://www.simplypostcode.com/address-finder-for-web-site)
+
+[Prices](https://www.simplypostcode.com/pricing/price-list)
+
+[What makes us different](https://www.simplypostcode.com/royal-mail-paf-daily-data)
 
 ## Screen shots
 1. Search by postcode<br>
