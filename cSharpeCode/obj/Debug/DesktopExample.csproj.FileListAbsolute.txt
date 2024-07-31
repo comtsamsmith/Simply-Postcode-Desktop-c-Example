@@ -26,3 +26,17 @@ D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNet
 D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\obj\Debug\DesktopExample.csproj.CopyComplete
 D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\obj\Debug\DesktopExample.exe
 D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\obj\Debug\DesktopExample.pdb
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.csproj.AssemblyReference.cache
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.csproj.SuggestedBindingRedirects.cache
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.Form1.resources
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.Properties.Resources.resources
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.csproj.GenerateResource.cache
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.csproj.CoreCompileInputs.cache
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.exe
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.pdb
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\bin\Debug\DesktopExample.exe.config
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\bin\Debug\DesktopExample.exe
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\bin\Debug\DesktopExample.pdb
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\vbnet\Projects\Postcode\Programming ExamplesV3\Desktop\WindowsDotNetCsharpe\DesktopExample\Simply-Postcode-Desktop-c--example\cSharpeCode\obj\Debug\DesktopExample.csproj.CopyComplete

@@ -21,6 +21,7 @@ namespace DesktopExample
         //Used to store the API key in registery, and base url etc
         Settings settings = new Settings();
 
+        //API Documentation: https://www.simplypostcode.com/address-finder-open-api
         //Swagger UI: https://api.simplylookupadmin.co.uk/index.html
 
         //Setup a timer to perform a sear, using the API, when user has stopped typing for 300ms
@@ -30,10 +31,10 @@ namespace DesktopExample
         public Form1()
         {
             InitializeComponent();
+
+            //Load saved settings
             if (settings.Load())
-            {
                 this.textBoxKey.Text = settings.apiKey;
-            }
 
             //Setup a timer to perform a sear, using the API, when user has stopped typing for 300ms
             typingTimer = new System.Timers.Timer { Interval = TypingDelay, AutoReset = false };
@@ -48,6 +49,7 @@ namespace DesktopExample
             listBoxAddressLines.Left = textBoxAddress.Left;
             listBoxAddressLines.Size = textBoxAddress.Size;
 
+            //Hide Search list
             ShowList(false);
 
             //Optional nice features:
@@ -64,6 +66,7 @@ namespace DesktopExample
 
         private void TextBoxFind_KeyUp(object sender, KeyEventArgs e)
         {
+            //Reset timer on every key stroke
             typingTimer.Stop();
             typingTimer.Start();
         }
@@ -83,6 +86,7 @@ namespace DesktopExample
             //Call for address list of matching results
             //see https://www.simplypostcode.com/address-finder-open-api#getaddresslist
 
+            //&options=B will add bold to matching text "Address <b>matching Text</b> text line"
             string url = $"{Settings.ApiBaseUrl}/full_v3/getaddresslist?query={Uri.EscapeDataString(query)}&data_api_Key={settings.apiKey}&options={settings.options}";
 
             HttpClient client = new HttpClient();
@@ -92,7 +96,7 @@ namespace DesktopExample
             {
                 string jsonResponse = await response.Content.ReadAsStringAsync();
                 var addressList = Newtonsoft.Json.JsonConvert.DeserializeObject<TypeDefs.AddressListResponse>(jsonResponse);
-                Invoke(new Action(() => PopulateListBox(addressList)));      //Put on UI thread     
+                Invoke(new Action(() => PopulateListBox(addressList)));      //Put on UI thread to populate list     
             }
             else
             {
@@ -112,6 +116,7 @@ namespace DesktopExample
 
         private void PopulateListBox(TypeDefs.AddressListResponse resp) //List<TypeDefs.AddressResult> addresses,string instructions)
         {
+            //Show Search list
             ShowList(true);
 
             //Populate address list with results
@@ -125,13 +130,14 @@ namespace DesktopExample
             if (listBoxAddressLines.Items.Count == 1)
                 labelInstructions.Text = "Press Tab to use this address";
             else
-                labelInstructions.Text = resp.instructions;
+                labelInstructions.Text = resp.instructionsTxt;
 
         }
 
         private async void ListBoxAddressLines_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //User has selected an address
+            //User has selected an address, so get address details
+            //You would probably do this on double click. 
             if (listBoxAddressLines.SelectedItem is TypeDefs.ListBoxItem selectedItem)
             {
                 ShowList(false);
@@ -142,7 +148,8 @@ namespace DesktopExample
         private async Task GetSelectedAddress(string id)
         {
             //Call API to get selected address details
-            //If you're on a credits-based license, this call will cost one credit, so you should make sure the user only selects the address they need, not as they scroll through the list.
+            //If you're on a credits-based license, this call will cost one credit, so you should make sure the user only selects the address
+            //they need, not as they scroll through the list.
             //see https://www.simplypostcode.com/address-finder-open-api#getselectedaddress
             string url = $"{Settings.ApiBaseUrl}/full_v3/getselectedaddress?id={Uri.EscapeDataString(id)}&data_api_Key={settings.apiKey}";
 
@@ -154,8 +161,8 @@ namespace DesktopExample
                 string jsonResponse = await response.Content.ReadAsStringAsync();
                 var selectedAddress = Newtonsoft.Json.JsonConvert.DeserializeObject<TypeDefs.SelectedAddressResponse>(jsonResponse);
 
+                //Put address in multiline address field
                 textBoxAddress.Text = $"{selectedAddress.Organisation}\r\n{selectedAddress.Line1}\r\n{selectedAddress.Line2}\r\n{selectedAddress.Line3}\r\n{selectedAddress.Town}\r\n{selectedAddress.County}\r\n{selectedAddress.Postcode}\r\n{selectedAddress.Country}\r\n\r\n{selectedAddress.found}\r\n{selectedAddress.licenseStatus}";
-
             }
             else
             {
@@ -165,6 +172,8 @@ namespace DesktopExample
 
         private void ListBoxAddressLines_DrawItem(object sender, DrawItemEventArgs e)
         {
+            //in the results line Bold the text marked with HTML "<b>" starts the bold and "</b>" ends the Bold.
+            //some platforms it may not be possible to bold items in a list.
             if (e.Index < 0) return;
 
             var item = listBoxAddressLines.Items[e.Index].ToString();
@@ -217,6 +226,7 @@ namespace DesktopExample
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            //Save API key to settings
             settings.apiKey = this.textBoxKey.Text;
 
             if (settings.Save())
@@ -236,7 +246,7 @@ namespace DesktopExample
 
         private void ShowList(bool showListState)
         {
-            //Show hide UI elements
+            //Show/Hide UI elements
             listBoxAddressLines.Visible = showListState;
             textBoxAddress.Visible = !showListState;
             buttonCopy.Visible = !showListState;
@@ -252,10 +262,7 @@ namespace DesktopExample
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
 
