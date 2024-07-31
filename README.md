@@ -159,12 +159,14 @@ Thats great, can we make "listBoxAddressLines" hidden, and only shown when searc
 
 ## Other Refinements
 
-On the last call "full_v3/getaddresslist"
+Change the address mapping to your address fields [Data Returned by getselectedaddress](https://www.simplypostcode.com/address-finder-open-api#/data)
+
+On the last call "full_v3/getaddresslist" [Info on getaddresslist](https://www.simplypostcode.com/address-finder-open-api#/getaddresslist)
 1. queryid - If you are implementing search as you type, you can supply a counter in this parameter, which is returned. This allows you to process the most recent query results and ignore any 
 older responses.
 2. inputid - If you have multiple address forms, you can give each a number, which is returned in the response. Then your response code can then act appropriately.
 
-On the last call "full_v3/getselectedaddress"
+On the last call "full_v3/getselectedaddress" [Info on getselectedaddress](https://www.simplypostcode.com/address-finder-open-api#/getselectedaddress)
 1. homelocation - if set to a valid postcode, or 'lat,long', it will calculate the distance from the Address
 2. inputid - If you have multiple address forms, you can give each a number, which is returned in the response. Your response code can act appropriately.
 3. userid - If used within an organisation by employees of a company with a user-based license, then this should identify the call for data used to count the users. User Name or GUID relating to the user. (must be 8 Chars or More).  This is a requirement of the Royal Mail Terms & Conditions. Not required if credit packs are purchased.
