@@ -38,7 +38,7 @@ First in c# .Net App we created a form with:
 1. textBoxFind  - For user to type address into
 2. listBoxAddressLines  - To display the list of results
 3. textBoxAddress  - multiline textbox to display the Full Address Details
-4. labelInstructions  - Label for dynamic instructions set to "Type Postcode, Postcode + Part of address or words to search"
+4. labelInstructions  - Label for dynamic user instructions
 
 Note also we are calling `full_v3/getaddresslist` with `&options=B` which will Add `<b>` and `</b>` around the results matching text.  You may not want this.
 
@@ -150,18 +150,17 @@ will return json
 Then, put the returned address fields "organisation,line1,line2,line3,town,county,postcode,
 country,found,licenseStatus" into a multiline textbox called "textBoxAddress."  
 ```
-
-Next we asked:
+When this was working, we then asked:
 
 ```
-Thats great, can we make "listBoxAddressLines" hidden, and only shown when search is in progress
+That's great, can we make "listBoxAddressLines" hidden, and only shown when a search is in progress, also initially set labelInstructions to "Type Postcode, Postcode + Part of address or words to search"
 ```
 
 ## Other Refinements
 
 Change the address mapping to your address fields [Data Returned by getselectedaddress](https://www.simplypostcode.com/address-finder-open-api#/data)
 
-On the last call "full_v3/getaddresslist" [Info on getaddresslist](https://www.simplypostcode.com/address-finder-open-api#/getaddresslist)
+On the first call "full_v3/getaddresslist" [Info on getaddresslist](https://www.simplypostcode.com/address-finder-open-api#/getaddresslist)
 1. queryid - If you are implementing search as you type, you can supply a counter in this parameter, which is returned. This allows you to process the most recent query results and ignore any 
 older responses.
 2. inputid - If you have multiple address forms, you can give each a number, which is returned in the response. Then your response code can then act appropriately.
