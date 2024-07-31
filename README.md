@@ -40,7 +40,7 @@ First in c# .Net App we created a form with:
 3. textBoxAddress  - multiline textbox to display the Full Address Details
 4. labelInstructions  - Label for instructions set to "Type Postcode, Postcode + Part of address or words to search"
 
-Note also we are calling `full_v3/getaddresslist` with `&options=B` which will Add `<b>` and `</b>` around the results matching text.
+Note also we are calling `full_v3/getaddresslist` with `&options=B` which will Add `<b>` and `</b>` around the results matching text.  You may not want this.
 
 Simply change "In c#, .net 4.8 Windows app, " to what ever ... and ask chat GPT...
 
@@ -53,7 +53,7 @@ I would suggest on key up event, of this textbox, if user stops typing for 300 m
 "https://api.simplylookupadmin.co.uk/full_v3/getaddresslist?data_api_Key=APIKEY&query=texttosearch&options=B" to 
 populate a selection box called "listBoxAddressLines".  
 
-if texttosearch="PE13 2QL", this API call will return json
+Example. If texttosearch="PE13 2QL", this API call will return json
 
 "{
 
@@ -97,13 +97,20 @@ if texttosearch="PE13 2QL", this API call will return json
 
   "errormessage": ""
 
-}" display this for user selection, and then if the user selects a line, call full_v3/getselectedaddress 
-with api key and ID of line selected.   And updated "labelInstructions" label with "instructionsHtml" from the json results.
+}" display this for user selection, and then if the user selects a line, call 
+full_v3/getselectedaddress with api key and ID of line selected.   And 
+update "labelInstructions" label with "instructionsHtml" from the 
+json results.
 
-Also, if one line is returned in the results, and the user tabs out of the "textBoxFind" text box, we make it select first item as if the user selected it.
-And the in the results line Bold the text marked with HTML "<b>" starts the bold and "</b> ends the Bold.
+Also, if one line is returned in the results, and the user tabs out of the 
+"textBoxFind" text box, we make it select first item as if the user
+selected it.
+And the in the results line Bold the text marked with HTML "<b>" starts 
+the bold and "</b> ends the Bold.
 
-When the user selects a line in the results, the API call full_v3/getselectedaddress?data_api_Key=APIKEY&id=Selected line id, will return json
+When the user selects a line in the results, the API call 
+full_v3/getselectedaddress?data_api_Key=APIKEY&id=Selected line id, 
+will return json
 
 "{ 
     "found": true, 
@@ -143,8 +150,8 @@ Then, put the returned address fields "organisation,line1,line2,line3,town,count
 country,found,licenseStatus" into a multiline textbox called "textBoxAddress."  
 ```
 
-## Other refinements
-We added code to hide the select box when no in use
+## Other Refinements
+We added code to hide the select box when not in use
 
 On the last call "full_v3/getaddresslist"
 1. queryid - If you are implementing search as you type, you can supply a counter in this parameter, which is returned. This allows you to process the most recent query results and ignore any 
@@ -152,6 +159,6 @@ older responses.
 2. inputid - If you have multiple address forms, you can give each a number, which is returned in the response. Then your response code can then act appropriately.
 
 On the last call "full_v3/getselectedaddress"
-1. homelocation - if set to a valid postcode, or 'lat,long', it will calculate the distance from Address
-2. inputid - If you have multiple address forms, you can give each a number, which is returned in the response. Then your response code can then act appropriately.
-3. userid - If used within an organisation by employees of a company with a user-based license, then this should identify the call for data used to count the users. User Name or GUID relating to the user. (must be 8 Chars or More)
+1. homelocation - if set to a valid postcode, or 'lat,long', it will calculate the distance from the Address
+2. inputid - If you have multiple address forms, you can give each a number, which is returned in the response. Your response code can act appropriately.
+3. userid - If used within an organisation by employees of a company with a user-based license, then this should identify the call for data used to count the users. User Name or GUID relating to the user. (must be 8 Chars or More).  This is a requirement of the Royal Mail Terms & Conditions. Not required if credit packs are purchased.
