@@ -133,7 +133,7 @@
             // labelInstructions
             // 
             this.labelInstructions.AutoSize = true;
-            this.labelInstructions.Location = new System.Drawing.Point(150, 403);
+            this.labelInstructions.Location = new System.Drawing.Point(150, 131);
             this.labelInstructions.Name = "labelInstructions";
             this.labelInstructions.Size = new System.Drawing.Size(239, 13);
             this.labelInstructions.TabIndex = 10;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 406);
+            this.ClientSize = new System.Drawing.Size(577, 434);
             this.Controls.Add(this.labelInstructions);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonCopy);
@@ -157,6 +157,7 @@
             this.Controls.Add(this.textBoxKey);
             this.Name = "Form1";
             this.Text = "Simply Postcode Example";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

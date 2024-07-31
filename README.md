@@ -38,7 +38,7 @@ First in c# .Net App we created a form with:
 1. textBoxFind  - For user to type address into
 2. listBoxAddressLines  - To display the list of results
 3. textBoxAddress  - multiline textbox to display the Full Address Details
-4. labelInstructions  - Label for instructions set to "Type Postcode, Postcode + Part of address or words to search"
+4. labelInstructions  - Label for dynamic instructions set to "Type Postcode, Postcode + Part of address or words to search"
 
 Note also we are calling `full_v3/getaddresslist` with `&options=B` which will Add `<b>` and `</b>` around the results matching text.  You may not want this.
 
@@ -50,8 +50,8 @@ calls an API given at https://api.simplylookupadmin.co.uk.
 
 I would suggest on key up event, of this textbox, if user stops typing for 300 ms call
 
-"https://api.simplylookupadmin.co.uk/full_v3/getaddresslist?data_api_Key=APIKEY&query=texttosearch&options=B" to 
-populate a selection box called "listBoxAddressLines".  
+"https://api.simplylookupadmin.co.uk/full_v3/getaddresslist?data_api_Key=APIKEY&query=texttosearch
+&options=B" to populate a selection box called "listBoxAddressLines".  
 
 Example. If texttosearch="PE13 2QL", this API call will return json
 
@@ -105,6 +105,7 @@ json results.
 Also, if one line is returned in the results, and the user tabs out of the 
 "textBoxFind" text box, we make it select first item as if the user
 selected it.
+
 And the in the results line Bold the text marked with HTML "<b>" starts 
 the bold and "</b> ends the Bold.
 
@@ -150,8 +151,13 @@ Then, put the returned address fields "organisation,line1,line2,line3,town,count
 country,found,licenseStatus" into a multiline textbox called "textBoxAddress."  
 ```
 
+Next we asked:
+
+```
+Thats great, can we make "listBoxAddressLines" hidden, and only shown when search is in progress
+```
+
 ## Other Refinements
-We added code to hide the select box when not in use
 
 On the last call "full_v3/getaddresslist"
 1. queryid - If you are implementing search as you type, you can supply a counter in this parameter, which is returned. This allows you to process the most recent query results and ignore any 

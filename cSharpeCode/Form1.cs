@@ -56,7 +56,7 @@ namespace DesktopExample
             //and getaddresslist API is called with &options=B to activate bold markers
             listBoxAddressLines.DrawMode = DrawMode.OwnerDrawFixed;
             this.listBoxAddressLines.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ListBoxAddressLines_DrawItem);
-            settings.options = "B";  //activate bold markers
+            settings.options = "B";  //activate bold markers for retsults with matching text
 
             // Handle the Leave event to select the first item if only one is present
             textBoxFind.Leave += TextBoxFind_Leave;
@@ -250,6 +250,11 @@ namespace DesktopExample
             {
                 label3.Text = "Address:";
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
