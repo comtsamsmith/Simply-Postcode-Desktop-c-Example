@@ -14,7 +14,7 @@ namespace DesktopExample.AppCode
         {
             public List<AddressResult> Results { get; set; }
 
-            public string instructions { get; set; }
+            public string instructionsHtml { get; set; }
             public string instructionsTxt { get; set; }
             public string finishword { get; set; }
         }
